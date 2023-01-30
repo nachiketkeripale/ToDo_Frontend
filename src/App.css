@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.ReactModal__Content {
+  background-color: #ffffff;
+  border: #1f1f1f solid 1px;
+  border-radius: 5px;
+  width: auto;
+  height: auto;
+  margin: 5% 10%;
+  padding: 20px;
+}

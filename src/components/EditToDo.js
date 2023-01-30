@@ -52,9 +52,10 @@ const closeModal = () => setIsModalOpen(false);
           setIsModalOpen(false)
         }else{
         setnewtitle(title);
-        alltasks.map((e)=>{
+        alltasks.map((e)=> {
           setallTasks(arr =>[...arr,e]);
           setVisibility("");
+          return 0;
         })
         setIsModalOpen(isOpen)
         }

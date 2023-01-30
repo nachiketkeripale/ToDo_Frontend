@@ -21,11 +21,9 @@ const ToDo = () => {
 
   const addToDo = async () =>{
 
-    if(!title && !alltasks.length == 0){
+    if(!title && !alltasks.length === 0){
       alert("Enter ToDo");
     } else {
-
-    
 
     const data = {
       title,
@@ -33,7 +31,7 @@ const ToDo = () => {
     }
 
     try{
-      const addToDo = await axios.post('todo',data)
+      await axios.post('todo',data)
       setallTasks([]);
       setTask("");
       setTitle("");
@@ -43,24 +41,24 @@ const ToDo = () => {
   }
   }
 
-  const editToDo = async (todo,id) => {
-    try {
-        // const newtitle = prompt("Updated Title",todo.title);
-        // const newtask = prompt("Tasks",todo.tasks)
-        // setTitle(newtitle);
-        // setallTasks(...alltasks,newtask);
+//   const editToDo = async (todo,id) => {
+//     try {
+//         // const newtitle = prompt("Updated Title",todo.title);
+//         // const newtask = prompt("Tasks",todo.tasks)
+//         // setTitle(newtitle);
+//         // setallTasks(...alltasks,newtask);
 
-        console.log(title);
-        console.log(alltasks);
-        console.log(id);
+//         console.log(title);
+//         console.log(alltasks);
+//         console.log(id);
         
-        // const res = await axios.put(`todo/${id}`,title,alltasks);
-        // console.log(res);
+//         // const res = await axios.put(`todo/${id}`,title,alltasks);
+//         // console.log(res);
 
-     } catch (error) {
-        console.log(error)
-     } 
-}
+//      } catch (error) {
+//         console.log(error)
+//      } 
+// }
 
   return (
     <div className="m-1 px-4 flex-row md:flex-col border">
